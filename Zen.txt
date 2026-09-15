@@ -34,7 +34,7 @@ Zen of Python!
 32.Horugv
 33.Skajl-dev
 34.besvova490
-35.oleksandr-kondratiev
+35.Although never is often better than *right* now.
 36.magal-07
 37.Aknavi
 38.
