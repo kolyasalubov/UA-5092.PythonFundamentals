@@ -10,7 +10,7 @@ Zen of Python!
 8.Artemdsaw
 9.Mihail-Ivannikov
 10.karpa-anastasia
-11.halynavseluba
+11.Unless explicitly silenced.
 12.pidlipnamarta
 13.AlexAvgust
 14.Essenthial
