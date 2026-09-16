@@ -3,7 +3,7 @@ Zen of Python!
 1.serhiigrin4-ai
 2.Pidhornyi
 3.chillipizdrikk
-4.0xArtemon
+4.Complex is better than complicated.
 5.Flat is better than nested.
 6.Sparse is better than dense.
 7.Readability counts.
