@@ -16,7 +16,7 @@ Zen of Python!
 14.Essenthial
 15.ViktoriaKhsss
 16.andriiisopenko
-17.OleksandrMasliennikov
+17.If the implementation is hard to explain, it's a bad idea.
 18.o-denko
 19.Shomastelbi
 20.konstantinaks
