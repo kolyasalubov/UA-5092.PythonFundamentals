@@ -5,7 +5,7 @@ Zen of Python!
 3.chillipizdrikk
 4.0xArtemon
 5.AntonHritsai
-6.exideys
+6.Sparse is better than dense.
 7.katy-mozharovska
 8.Artemdsaw
 9.Mihail-Ivannikov
