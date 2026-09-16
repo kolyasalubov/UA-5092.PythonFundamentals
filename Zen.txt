@@ -9,7 +9,7 @@ Zen of Python!
 7.katy-mozharovska
 8.Artemdsaw
 9.Mihail-Ivannikov
-10.karpa-anastasia
+10.Simple is better than complex.
 11.Unless explicitly silenced.
 12.pidlipnamarta
 13.AlexAvgust
