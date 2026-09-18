@@ -28,7 +28,7 @@
 26.Readability counts.
 27.Yam1kuro
 28.leeroooyy
-29.exsqze
+29.Errors should never pass silently.
 30.kara-te-code
 31.In the face of ambiguity, refuse the temptation to guess.
 32.Horugv
