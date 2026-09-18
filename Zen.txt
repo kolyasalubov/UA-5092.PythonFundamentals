@@ -1,8 +1,8 @@
-Zen of Python!
+ checZen of Python!
 
 1.serhiigrin4-ai
 2.Pidhornyi
-3.chillipizdrikk
+3.Simple is better than complex.
 4.Complex is better than complicated.
 5.Flat is better than nested.
 6.Sparse is better than dense.
