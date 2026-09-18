@@ -36,7 +36,7 @@ Zen of Python!
 34.besvova490
 35.Although never is often better than *right* now.
 36.magal-07
-37.Aknavi
+37.If the implementation is easy to explain, it may be a good idea.
 38.ArmlaMcLAren
 39.
 40.
