@@ -12,7 +12,7 @@ Zen of Python!
 10.Simple is better than complex.
 11.Unless explicitly silenced.
 12.pidlipnamarta
-13.AlexAvgust
+13.There should be one-- and preferably only one --obvious way to do it.
 14.Essenthial
 15.Now is better than never.
 16.Although never is often better than *right* now.
