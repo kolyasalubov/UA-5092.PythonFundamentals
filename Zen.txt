@@ -8,7 +8,7 @@
 6.Sparse is better than dense.
 7.Readability counts.
 8.Artemdsaw
-9.Mihail-Ivannikov
+9.Although practicality beats purity.
 10.Simple is better than complex.
 11.Unless explicitly silenced.
 12.pidlipnamarta
