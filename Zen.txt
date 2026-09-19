@@ -21,7 +21,7 @@
 19.Shomastelbi
 20.konstantinaks
 21.Explicit is better than implicit.
-22.ShpyraAndrii
+22.Simple is better than complex.
 23.ehryhorenko
 24.Slavik621
 25.1Zorian1
