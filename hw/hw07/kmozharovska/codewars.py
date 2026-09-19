@@ -86,7 +86,9 @@ def solution(number: int) -> int:
 
 
 # VIII. Will you make it?
-def zero_fuel(distance_to_pump: int | float, mpg: int | float, fuel_left: int | float) -> bool:
+def zero_fuel(distance_to_pump: int | float,
+              mpg: int | float,
+              fuel_left: int | float) -> bool:
     """
     Verify if it is possible to get to the pump or not.
     input parameters:
