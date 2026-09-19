@@ -223,7 +223,7 @@ The Zen of Python, by Tim Peters
 36.magal-07
 37.If the implementation is easy to explain, it may be a good idea.
 38.ArmlaMcLAren
-39.ochura-s
+39.Beautiful is better than ugly.
 40.mykhailozab
 41.Simple is better than complex.
 42.Complex is better than complicated.
