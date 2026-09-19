@@ -24,7 +24,7 @@ The Zen of Python, by Tim Peters
 16.Although never is often better than *right* now.
 17.If the implementation is hard to explain, it's a bad idea.
 18.If the implementation is easy to explain, it may be a good idea.
-19.Namespaces are one honking great idea -- let's do more of those!!!
+19.Namespaces are one honking great idea -- let's do more of those!!
 20.Beautiful is better than ugly.
 21.Explicit is better than implicit.
 22.Simple is better than complex.
@@ -41,6 +41,7 @@ The Zen of Python, by Tim Peters
 33.Although that way may not be obvious at first unless you're Dutch.
 34.Now is better than never.
 35.Although never is often better than *right* now.
+<<<<<<< HEAD
 36.If the implementation is hard to explain, it's a bad idea
 37.If the implementation is easy to explain, it may be a good idea.
 38.Namespaces are one honking great idea -- let's do more of those!
@@ -206,3 +207,30 @@ The Zen of Python, by Tim Peters
 198.Special cases aren't special enough to break the rules.
 199.Although practicality beats purity.
 200.Errors should never pass silently.
+=======
+36.magal-07
+37.If the implementation is easy to explain, it may be a good idea.
+38.ArmlaMcLAren
+39.
+40.
+41.
+42.
+43.
+44.
+45.
+46.
+47.
+48.
+49.
+50.
+51.
+52.
+53.
+54.
+55.
+56.
+57.
+58.
+59.
+60.
+>>>>>>> 3e5e1c4273e210ec44753feba804c7ca5ec0b2a2
