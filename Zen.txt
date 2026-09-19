@@ -38,10 +38,10 @@
 36.magal-07
 37.If the implementation is easy to explain, it may be a good idea.
 38.ArmlaMcLAren
-39.
-40.
-41.
-42.
+39.ochura-s
+40.mykhailozab
+41.Maksym121-42
+42.Maksym121-42
 43.
 44.
 45.
