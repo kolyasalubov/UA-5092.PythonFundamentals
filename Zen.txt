@@ -112,7 +112,7 @@ The Zen of Python, by Tim Peters
 110.Now is better than never.
 111.Although never is often better than *right* now.
 112.If the implementation is hard to explain, it's a bad idea.
-113.If the implementation is easy to explain, it may be a good idea.
+113.konstantinaks
 114.Namespaces are one honking great idea -- let's do more of those!
 115.Beautiful is better than ugly.
 116.Explicit is better than implicit.
