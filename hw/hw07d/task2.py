@@ -1,6 +1,5 @@
 import math
 
-
 def rectangle_area(a, b):
     """Обчислює площу прямокутника."""
     if a <= 0 or b <= 0:
@@ -64,3 +63,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
