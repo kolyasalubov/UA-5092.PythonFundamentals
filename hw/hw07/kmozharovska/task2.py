@@ -1,60 +1,41 @@
-def calculate_rectangle_area(length: int | float,
-                             width: int | float) -> int | float:
+from math import pi, pow
+
+
+def calculate_rectangle_area(length: float, width: float) -> float:
     """
     Calculate the area of a rectangle.
-    input parameters:
-        length - int or float
-        width - int or float
-    output:
-        int or float
+    Args:
+        length - float
+        width - float
+    Returns: float
     """
-    if not (isinstance(length, (int, float))
-            and isinstance(width, (int, float))):
-        raise TypeError("Both arguments should be int or float data type.")
-
     if length <= 0 or width <= 0:
         raise ValueError("Both arguments should be positive.")
 
     return length * width
 
 
-def calculate_triangle_area(base: int | float, 
-                            height: int | float) -> float:
+def calculate_triangle_area(base: float, height: float) -> float:
     """
     Calculate the area of a triangle.
-    input parameters:
-        base - int or float
-        height - int or float
-    output: float
+    Args:
+        base - float
+        height - float
+    Returns: float
     """
-    if not (isinstance(base, (int, float))
-            and isinstance(height, (int, float))):
-        raise TypeError("Both arguments should be int or float data type.")
-
     if base <= 0 or height <= 0:
         raise ValueError("Both arguments should be positive.")
 
     return (base * height) / 2
 
 
-def calculate_circle_area(radius: int | float) -> float:
+def calculate_circle_area(radius: float) -> float:
     """
     Calculate the area of a circle.
-    input parameters:
-        radius - int or float
-    output: float
+    Args: radius - float
+    Returns: float
     """
-    p = 3.14159
-
-    if not isinstance(radius, (int, float)):
-        raise TypeError("Radius should be int or float data type.")
-
     if radius <= 0:
         raise ValueError("Radius should be positive.")
 
-    return p * radius ** 2
-
-
-calculate_rectangle_area(10, 5) #50
-calculate_triangle_area(8, 5) #20.0
-calculate_circle_area(5) #78.53975
+    return pi * pow(radius, 2)

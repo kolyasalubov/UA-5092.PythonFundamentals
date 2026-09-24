@@ -1,16 +1,16 @@
+import re
+
+
 def count_symbols(text: str) -> dict[str, int]:
     """
     Count occurrences of each distinct symbol.
-    input parameters: text - str
-    output: dict[str, int] sorted by value DESC
+    Args: text - str
+    Returns: dict[str, int] sorted by value DESC
     """
-    if not isinstance(text, str):
-        raise TypeError("'Text' argument should be str data type.")
-
     if not text:
         return {}
 
-    symbols = set(text)
+    symbols = list(set(text))
     result = {symbol: text.count(symbol) for symbol in symbols}
 
     if len(symbols) == 1:
@@ -23,6 +23,17 @@ def count_symbols(text: str) -> dict[str, int]:
     return sorted_result
 
 
-count_symbols("Aaaa!..") #{{'a': 3, '.': 2, 'A': 1, '!': 1}
-count_symbols("") #{}
-count_symbols(" ") #{' ': 1}
+if __name__ == "__main__":
+    text = input("Enter your text: ")
+    symbols_frequency = count_symbols(text)
+
+    if symbols_frequency:
+        print("In your text:")
+        for symbol, frequency in symbols_frequency.items():
+            pattern = r"^\s$"
+            if bool(re.match(pattern, symbol)):
+                print(f"there are {frequency} whitespaces")
+            else:
+                print(f"{symbol} is mentioned {frequency} time(s)")
+    else:
+        print("Text wasn't provided.")

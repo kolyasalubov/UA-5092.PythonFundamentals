@@ -2,8 +2,8 @@
 def greet(name: str) -> str:
     """
     Greet person by name.
-    input parameters: name - str
-    output: str
+    Args: name - str
+    Returns: str
     """
     if name == "Johnny":
         return "Hello, my love!"
@@ -14,8 +14,8 @@ def greet(name: str) -> str:
 def distance(x1, y1, x2, y2) -> float:
     """
     Calculate the distance between two points.
-    input parameters: x1, y1, x2, y2 - int or float
-    output: float
+    Args: x1, y1, x2, y2 - int or float
+    Returns: float
     """
     return round(((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5, 2)
 
@@ -24,14 +24,14 @@ def distance(x1, y1, x2, y2) -> float:
 def filter_words(st: str) -> str:
     """
     Normalize input string.
-    input parameters: st - str
-    output: str
+    Args: st - str
+    Returns: str
     """
     normalized_st = st.strip().lower().capitalize()
-    
+
     while "  " in normalized_st:
         normalized_st = normalized_st.replace("  ", " ")
-    
+
     return normalized_st
 
 
@@ -39,8 +39,8 @@ def filter_words(st: str) -> str:
 def number_to_string(num: int) -> str:
     """
     Convert integer to string.
-    input parameters: num - int
-    output: str
+    Args: num - int
+    Returns: str
     """
     return str(num)
 
@@ -49,53 +49,53 @@ def number_to_string(num: int) -> str:
 def reverse(st: str) -> str:
     """
     Reverse words in a string.
-    input parameters: st - str
-    output: str
+    Args: st - str
+    Returns: str
     """
     list_st = st.strip().split()
     return " ".join(list_st[::-1])
 
 
 # VI. Reverse List Order
-def reverse_list(l: list) -> list:
+def reverse_list(my_list: list) -> list:
     """
     Return a list with the reverse order.
-    input parameters: l - list
-    output: list
+    Args: my_list - list
+    Returns: list
     """
-    return l[::-1]
+    return my_list[::-1]
 
 
 # VII. Multiples of 3 or 5
 def solution(number: int) -> int:
     """
     Return the sum of all the multiples of 3 or 5 below the number passed in.
-    input parameters: number - int
-    output: int
+    Args: number - int
+    Returns: int
     """
     if number < 0:
         return 0
-    
+
     multiples = set()
-    
+
     for i in range(number):
         if i % 3 == 0 or i % 5 == 0:
             multiples.add(i)
-            
+
     return sum(multiples)
 
 
 # VIII. Will you make it?
-def zero_fuel(distance_to_pump: int | float,
-              mpg: int | float,
-              fuel_left: int | float) -> bool:
+def zero_fuel(distance_to_pump: float,
+              mpg: float,
+              fuel_left: float) -> bool:
     """
     Verify if it is possible to get to the pump or not.
-    input parameters:
-        distance_to_pump - int or float
-        mpg - int or float
-        fuel_left - int or float
-    output: bool
+    Args:
+        distance_to_pump - float
+        mpg - float
+        fuel_left - float
+    Returns: bool
     """
     fuel_need = distance_to_pump / mpg
     return fuel_left >= fuel_need
@@ -105,8 +105,8 @@ def zero_fuel(distance_to_pump: int | float,
 def are_you_playing_banjo(name: str) -> str:
     """
     Verify if a person plays banjo.
-    input parameters: name - str
-    output: str
+    Args: name - str
+    Returns: str
     """
     if name.lower()[0] == "r":
         return f"{name} plays banjo"
@@ -117,18 +117,18 @@ def are_you_playing_banjo(name: str) -> str:
 def bool_to_word(boolean: bool) -> str:
     """
     Convert boolean values to strings 'Yes' or 'No'.
-    input parameters: boolean - bool
-    output: str
+    Args: boolean - bool
+    Returns: str
     """
     return "Yes" if boolean else "No"
 
 
 # XI. Counting sheep
-def count_sheeps(sheep: list[bool]) -> int:
+def count_sheep(sheep: list[bool]) -> int:
     """
     Count the number of sheep present in the list.
-    input parameters: sheep - list[bool]
-    output: int
+    Args: sheep - list[bool]
+    Returns: int
     """
     return sheep.count(True)
 
@@ -137,9 +137,9 @@ def count_sheeps(sheep: list[bool]) -> int:
 def correct_tail(body: str, tail: str) -> bool:
     """
     Verify if 'body' ends with 'tail'.
-    input parameters:
+    Args:
         body - str
         tail - str
-    output: bool
+    Returns: bool
     """
     return body.endswith(tail)
