@@ -46,11 +46,20 @@ def reverse_list(l):
     return l[::-1]
 
 # Task7: Multiples of 3 or 5
-#If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
+# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
 # The sum of these multiples is 23.
 # Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 # Additionally, if the number is negative, return 0.
 # Note: If a number is a multiple of both 3 and 5, only count it once.
+
+def solution(number):
+    counter = 1
+    list_numbers = []
+    while counter < number:
+        if counter % 3 == 0 or counter % 5 == 0:
+            list_numbers.append(counter)
+        counter += 1
+    return sum(list_numbers)
 
 #Task8: Will you make it?
 # You were camping with your friends far away from home, 
