@@ -22,9 +22,7 @@ def distance(x1, y1, x2, y2):
 # and returning Wow this is really amazing. String should be capitalized and properly spaced.
 
 def filter_words(st):
-    st = st.capitalize().split()
-    st = " ".join(st)
-    return st
+    return " ".join(st.capitalize().split())
 
 #Task 4: We need a function that can transform a number (integer) into a string.
 #What ways of achieving this do you know?
@@ -37,7 +35,7 @@ def number_to_string(num):
 #As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
 
 def reverse(st):
-    return " ".join(st.split(" ")[::-1])
+    return " ".join(st.split()[::-1])
 
 #Task 6: In this kata you will create a function that takes in a list and returns a list with the reverse order.
 
@@ -51,13 +49,15 @@ def reverse_list(l):
 #Note: If a number is a multiple of both 3 and 5, only count it once.
 
 def solution(number):
+    if number <= 0:
+        return 0
     counter = 1
-    list_numbers = []
+    total = 0
     while counter < number:
         if counter % 3 == 0 or counter % 5 == 0:
-            list_numbers.append(counter)
+            total += counter
         counter += 1
-    return sum(list_numbers)
+    return total
 
 #Task 8:You were camping with your friends far away from home,
 # but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away!
@@ -66,7 +66,7 @@ def solution(number):
 #Function should return true if it is possible and false if not.
 
 def zero_fuel(distance_to_pump, mpg, fuel_left):
-   return fuel_left * mpg >= distance_to_pump
+    return fuel_left * mpg >= distance_to_pump
 
 #Task 9: Create a function which answers the question "Are you playing banjo?".
 #If your name starts with the letter "R" or lower case "r", you are playing banjo!
@@ -87,7 +87,7 @@ def bool_to_word(boolean):
 # We need a function that counts the number of sheep present in the array (true means present).
 
 def count_sheeps(sheep):
-  return sheep.count(True)
+    return sheep.count(True)
 
 #Task 12: Some new animals have arrived at the zoo.
 # The zoo keeper is concerned that perhaps the animals do not have the right tails.
@@ -97,5 +97,5 @@ def count_sheeps(sheep):
 #The arguments will always be non empty strings, and normal letters.
 
 def correct_tail(body, tail):
-    return tail[0] == body[-1]
+    return tail == body[-1]
 
