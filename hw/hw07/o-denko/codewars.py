@@ -171,8 +171,8 @@ def count_sheeps(sheep: list[bool]) -> int:
 # The arguments will always be non empty strings, and normal letters.
 
 
-def correct_tail(body, tail):
+def correct_tail(body: str, tail: str) -> bool:
     """
     Check whether the tail matches the last character of the body.
     """
-    return body.endswith(tail)[-1] == tail
+    return body[-1] == tail if body else False
