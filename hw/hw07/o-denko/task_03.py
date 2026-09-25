@@ -10,6 +10,12 @@ def count_characters(text: str) -> dict[str, int]:
 
     text: input string to count characters from
     """
+    if not isinstance(text, str):
+        raise TypeError("Input must be a string")
+    
+    if not text:
+        return {}
+
     result = {}
     for char in text:
         result[char] = result.get(char, 0) + 1

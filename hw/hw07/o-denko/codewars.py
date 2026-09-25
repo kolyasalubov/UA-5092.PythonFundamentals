@@ -5,7 +5,7 @@
 # but she made a mistake.
 
 
-def greet(name):
+def greet(name: str) -> str:
     """
     Return a personalized greeting, with a special case for Johnny.
     """
@@ -19,7 +19,7 @@ def greet(name):
 # Round to two decimal places. This should be easy to do in 0(1) timing.
 
 
-def distance(x1, y1, x2, y2):
+def distance(x1: float | int, y1: float | int, x2: float | int, y2: float | int) -> float:
     """
     Calculate the Euclidean distance between two points rounded to two decimal places.
     """
@@ -33,7 +33,7 @@ def distance(x1, y1, x2, y2):
 # capitalized and properly spaced.
 
 
-def filter_words(st):
+def filter_words(st: str) -> str:
     """
     Capitalize a sentence and normalize internal whitespace.
     """
@@ -45,7 +45,7 @@ def filter_words(st):
 # What ways of achieving this do you know?
 
 
-def number_to_string(num):
+def number_to_string(num: int | float) -> str:
     """
     Convert a number into its string representation.
     """
@@ -59,7 +59,7 @@ def number_to_string(num):
 # to ignore unneccesary whitespace.
 
 
-def reverse(st):
+def reverse(st: str) -> str:
     """
     Reverse the order of words in a string.
     """
@@ -74,7 +74,7 @@ def reverse(st):
 # takes in a list and returns a list with the reverse order.
 
 
-def reverse_list(items):
+def reverse_list(items: list) -> list:
     """
     Return a list in reverse order.
     """
@@ -94,6 +94,9 @@ def solution(number: int) -> int:
     """
     Return the sum of all natural multiples of 3 or 5 below the given number.
     """
+    if number <= 0: 
+        return 0
+
     total = 0
     for x in range(number):
         if x % 3 == 0 or x % 5 == 0:
@@ -124,11 +127,11 @@ def zero_fuel(distance_to_pump: int, mpg: int, fuel_left: int) -> bool:
 # The function takes a name as its only argument, and returns one of the following strings:
 
 
-def are_you_playing_banjo(name):
+def are_you_playing_banjo(name: str) -> str:
     """
     Determine if a person plays banjo based on the first letter of their name.
     """
-    if name[0].lower() == "r":
+    if name.lower().startswith("r"):
         return f"{name} plays banjo"
     return f"{name} does not play banjo"
 
@@ -138,7 +141,7 @@ def are_you_playing_banjo(name):
 # a "Yes" string for true, or a "No" string for false.
 
 
-def bool_to_word(boolean):
+def bool_to_word(boolean: bool) -> str:
     """
     Convert a boolean value to 'Yes' or 'No' string.
     """
@@ -151,7 +154,7 @@ def bool_to_word(boolean):
 # present in the array (true means present).
 
 
-def count_sheeps(sheep):
+def count_sheeps(sheep: list[bool]) -> int:
     """
     Count the number of present sheep in a given list.
     """
@@ -172,4 +175,4 @@ def correct_tail(body, tail):
     """
     Check whether the tail matches the last character of the body.
     """
-    return body[-1] == tail
+    return body.endswith(tail)[-1] == tail
