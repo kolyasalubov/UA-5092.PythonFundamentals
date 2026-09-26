@@ -1,43 +1,41 @@
 import math
 
-""" Jenny's secret message """
 
 def greet(name):
+    """Jenny's secret message"""
     if name == "Johnny":
         return "Hello, my love!"
     return "Hello, {name}!".format(name=name)
 
 
-""" Simple: Find The Distance Between Two Points """
-
 def distance(x1, y1, x2, y2):
-    return round(math.sqrt((x2 - x1)**2 + (y2 - y1)**2),2)
+    """Simple: Find The Distance Between Two Points"""
+    return round(math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2), 2)
 
-""" No yelling! """ 
 
 def filter_words(st):
-    words =" ".join(st.lower().split())
+    """No yelling!"""
+    words = " ".join(st.lower().split())
     return f"{words[:1].upper()}{words[1:]}"
 
-""" Convert a Number to a String! """
 
 def number_to_string(num):
+    """Convert a Number to a String!"""
     return str(num)
 
-""" Reversing Words in a String """
 
 def reverse(st):
+    """Reversing Words in a String"""
     return " ".join(reversed(st.split()))
 
-""" Reverse List Order """
 
-def reverse_list(l):
-    return list(reversed(l))
+def reverse_list(items):
+    """Reverse List Order"""
+    return list(reversed(items))
 
-
-""" Multiples of 3 or 5 """
 
 def solution(number):
+    """Multiples of 3 or 5"""
     if number < 0:
         return 0
     result = 0
@@ -45,29 +43,35 @@ def solution(number):
         if n % 3 == 0 or n % 5 == 0:
             result += n
     return result
-        
-"""  Will you make it? """
+
+
 def zero_fuel(distance_to_pump, mpg, fuel_left):
+    """Will you make it?"""
     return fuel_left * mpg >= distance_to_pump
 
-""" Are You Playing Banjo? """
-def are_you_playing_banjo(name):
-    return f"{name} plays banjo" if name[:1].lower() == 'r' else f"{name} does not play banjo"
 
-""" Convert boolean values to strings 'Yes' or 'No'. """
+def are_you_playing_banjo(name):
+    """Are You Playing Banjo?"""
+    if name[:1].lower() == 'r':
+        return f"{name} plays banjo"
+    return f"{name} does not play banjo"
+
+
 def bool_to_word(boolean):
+    """Convert boolean values to strings 'Yes' or 'No'."""
     return 'Yes' if boolean else 'No'
 
-""" Counting sheep... """
 
 def count_sheeps(sheep):
+    """Counting sheep..."""
     result = 0
     for s in sheep:
-        if s: result+=1
+        if s:
+            result += 1
     return result
 
-""" Is this my tail? """
 
 def correct_tail(body, tail):
-     sub = body[len(body)-len(tail):]
-     return True if sub == tail else False
+    """Is this my tail?"""
+    sub = body[len(body) - len(tail):]
+    return True if sub == tail else False
