@@ -1,4 +1,5 @@
 PI = 3.14
+
 def area_rectangle(height : float,width: float) -> float:
     """
     Find the area of a rectangle
