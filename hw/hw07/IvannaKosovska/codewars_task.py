@@ -1,3 +1,5 @@
+import math
+
 #task1: Jenny's secret message
 
 def greet(name):
@@ -8,8 +10,6 @@ def greet(name):
 
 
 #task2: Find The Distance Between Two Points
-
-import math
 
 def distance(x1, y1, x2, y2):
     """
@@ -93,4 +93,4 @@ def correct_tail(body, tail):
     return body[-1] == tail
 
 def correct_tail(body, tail):
-    return body.endswith(tail)
+return body.endswith(tail)
