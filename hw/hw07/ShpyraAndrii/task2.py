@@ -17,21 +17,30 @@ def get_circle_area(radius):
 
 
 def handle_rectangle_area():
-    width = float(input("Enter width in millimiters: "))
-    height = float(input("Enter height in millimiters: "))
+    width = float(input("Enter width in millimeters: "))
+    height = float(input("Enter height in millimeters: "))
+    if width <= 0 or height <= 0:
+        print("Width and height should be positive numbers")
+        return
     area = get_rectangle_area(width=width, height=height)
-    print(f"Rectangle area: {area}")
+    print(f"Rectangle area: {round(area, 2)}")
 
 
 def handle_triangle_area():
-    width = float(input("Enter width in millimiters: "))
-    height = float(input("Enter height in millimiters: "))
+    width = float(input("Enter width in millimeters: "))
+    height = float(input("Enter height in millimeters: "))
+    if width <= 0 or height <= 0:
+        print("Width and height should be positive numbers")
+        return
     area = get_triangle_area(width=width, height=height)
-    print(f"Triangle area: {area}")
+    print(f"Triangle area: {round(area, 2)}")
 
 
 def handle_circle_area():
-    radius = float(input("Enter radius in millimiters: "))
+    radius = float(input("Enter radius in millimeters: "))
+    if radius <= 0:
+        print("Radius should be positive number")
+        return
     area = get_circle_area(radius)
     print(f"Circle area: {round(area, 2)}")
 
