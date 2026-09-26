@@ -1,11 +1,10 @@
 from math import pi, pow
 
 """
-The module provides functions to calculate the area of a figure.
-(rectangle, triangle, circle)
+The module provides functions to calculate the area of a figure:
+rectangle, triangle, circle.
 """
-
-figure = ""
+POSITIVE_DIMENSIONS_ERROR = "Argument(s) should be positive."
 
 
 def calculate_rectangle_area(length: float,
@@ -18,7 +17,7 @@ def calculate_rectangle_area(length: float,
     Returns: float
     """
     if length <= 0 or width <= 0:
-        raise ValueError("Both arguments should be positive.")
+        raise ValueError(POSITIVE_DIMENSIONS_ERROR)
 
     return length * width
 
@@ -33,7 +32,7 @@ def calculate_triangle_area(base: float,
     Returns: float
     """
     if base <= 0 or height <= 0:
-        raise ValueError("Both arguments should be positive.")
+        raise ValueError(POSITIVE_DIMENSIONS_ERROR)
 
     return 0.5 * height * base
 
@@ -45,6 +44,6 @@ def calculate_circle_area(radius: float) -> float:
     Returns: float
     """
     if radius <= 0:
-        raise ValueError("Radius should be positive.")
+        raise ValueError(POSITIVE_DIMENSIONS_ERROR)
 
     return pi * pow(radius, 2)

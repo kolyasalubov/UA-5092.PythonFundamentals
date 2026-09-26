@@ -4,6 +4,10 @@ import re
 The module provides a function to check whether a password
 meets the required length and character requirements.
 """
+PASSWORD_PATTERN = (
+    r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$#@])"
+    r"[A-Za-z0-9$#@]{6,16}$"
+)
 
 
 def is_valid_password(password: str) -> bool:
@@ -12,8 +16,7 @@ def is_valid_password(password: str) -> bool:
     Args: password - str
     Returns: bool
     """
-    pattern = r"^[A-Za-z0-9$#@]{6,16}$"
-    return bool(re.match(pattern, password))
+    return bool(re.match(PASSWORD_PATTERN, password))
 
 
 if __name__ == '__main__':
