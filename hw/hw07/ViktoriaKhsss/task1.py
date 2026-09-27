@@ -1,4 +1,4 @@
-def max_number (a , b):
+def max_number(a: int, b: int) -> int:
     """
     Returns the largest of two numbers
     """
@@ -6,7 +6,3 @@ def max_number (a , b):
         return a
     else:
         return b
-
-print(max_number(8, 3))
-print(max_number(4, 4))
-print(max_number(-1, 0))

@@ -14,7 +14,6 @@ def distance(x1, y1, x2, y2):
     distance_result = (x_difference ** 2 + y_difference ** 2) ** 0.5
     return round(distance_result, 2)
 
-print(distance(4, 6, 7, 9))
     
 # 3. No yelling!
 
@@ -32,7 +31,7 @@ def number_to_string(num):
 
 def reverse(st):
     words = st.split()
-     
+    words = words[::-1]
     return " ".join(words)
 
 # 6. Reverse List Order
