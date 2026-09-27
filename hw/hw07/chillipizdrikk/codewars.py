@@ -66,13 +66,8 @@ def reverse_list(l):
 def solution(number):
     if number < 0:
         return 0
-    
-    result = 0
-    
-    for n in range(number):
-        if n % 3 == 0 or n % 5 == 0:
-            result += n
-    return result
+
+    return sum(n for n in range(number) if n % 3 == 0 or n % 5 == 0)
 
 
 # --------------------- Task 8: Will you make it? ---------------------
@@ -98,10 +93,7 @@ def zero_fuel(distance_to_pump, mpg, fuel_left):
 # Names given are always valid strings.
 
 def areYouPlayingBanjo(name):
-    if name.lower()[0] == 'r':
-        return name + ' plays banjo'
-    else:
-        return name + ' does not play banjo'
+    return name + (' plays banjo' if name.lower()[0] == 'r' else ' does not play banjo')
 
 
 # --------------------- Task 10: Convert boolean values to strings 'Yes' or 'No' ---------------------

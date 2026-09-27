@@ -37,6 +37,18 @@ def circle_area(radius: float) -> float:
     '''
     return pi * radius ** 2
 
+def check_number(number: str) -> float:
+    while True:
+        try:
+            value = float(input(number))
+            if value <= 0:
+                print("Value must be greater than zero.\n")
+                continue
+            return value
+        except ValueError:
+            print("Please enter a valid number.\n")
+
+
 def main():
     '''
     The program's entry point. Displays a menu to the user and calls the 
@@ -53,28 +65,21 @@ def main():
     
         match user_input:
             case "1":
-                try:
-                    length = float(input("Enter length: "))
-                    width = float(input("Enter width: "))
-                    print(f"Area of your rectangle is: {rectangle_area(length, width)}\n")
-                except ValueError:
-                    print("Please enter a valid number.\n")
+                length = check_number("Enter length: ")
+                width = check_number("Enter width: ")
+                print(f"Area of your rectangle is: {rectangle_area(length, width)}\n")
             case "2":
-                try:
-                    base = float(input("Enter base: "))
-                    height = float(input("Enter height: "))
-                    print(f"Area of your triangle is: {triangle_area(base, height)}\n")
-                except ValueError:
-                    print("Please enter a valid number.\n")
+                base = check_number("Enter base: ")
+                height = check_number("Enter height: ")
+                print(f"Area of your triangle is: {triangle_area(base, height)}\n")
             case "3":
-                try:
-                    radius = float(input("Enter radius: "))
-                    print(f"Area of your circle is: {circle_area(radius)}\n")
-                except ValueError:
-                    print("Please enter a valid number.\n")
+                radius = check_number("Enter radius: ")
+                print(f"Area of your circle is: {circle_area(radius)}\n")
+                print("Please enter a valid number.\n")
             case "4":
                 break
             case _:
                 print("Invalid input. Try again\n")
 
-main()
+if __name__ == "__main__":
+    main()

@@ -12,7 +12,7 @@ def calculate_characters(word: str) -> dict[str, int]:
         Dictionary with character and the number of times it appears in the word
     '''
     result = {}
-    for char in word:
+    for char in word.casefold().replace(" ", ''):
         result[char] = result.get(char, 0) + 1
 
     return result
