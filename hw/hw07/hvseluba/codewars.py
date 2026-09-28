@@ -98,8 +98,4 @@ def count_sheeps(sheep):
 # The arguments will always be non empty strings, and normal letters.
 
 def correct_tail(body, tail):
-    sub = body[-1]
-    if sub == tail:
-        return True
-    else:
-        return False
+    return body[-1] == tail
