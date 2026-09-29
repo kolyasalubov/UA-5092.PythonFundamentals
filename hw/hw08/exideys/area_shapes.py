@@ -10,6 +10,9 @@ def area_rectangle(width: float , height: float ) -> float:
     Returns:
         float: The area of the rectangle.
     """
+    if width <= 0 and height <= 0:
+        print("Width and height must be positive")
+        return None
     return width * height
 
 

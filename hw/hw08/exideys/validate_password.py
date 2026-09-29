@@ -6,7 +6,7 @@ def validation_password(user_password : str) -> bool:
     Validates a password against security complexity requirements.
 
     The password must be between 6 and 16 characters long and must contain
-    at least one uppercase letter, one lowercase letter, one digit (1-9),
+    at least one uppercase letter, one lowercase letter, one digit (0-9),
     and one special character from the set: $, #, @.
 
     Args:
@@ -15,6 +15,9 @@ def validation_password(user_password : str) -> bool:
     Returns:
         bool: True if the password meets all criteria, False otherwise.
     """
+    # Regex pattern checks that the password contains at least one uppercase letter,
+    # one lowercase letter, one digit, one special character ($, #, @),
+    # and has a total length of 6 to 16 characters.
     valid_pattern = r"^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[$#@])[A-Za-z0-9$#@]{6,16}$"
     
 
@@ -32,13 +35,13 @@ def main() -> None:
             break
         else:
             print(
-    "Your password is invalid\n"
-    "It must contain at least 1 lowercase letter a-z\n"
-    "It must contain at least 1 uppercase letter A-Z\n"
-    "It must contain at least 1 number 0-9\n"
-    "It must contain at least 1 special character $#@\n"
-    "Total length must be between 6 and 16 characters"
-)
+                "Your password is invalid\n"
+                "It must contain at least 1 lowercase letter a-z\n"
+                "It must contain at least 1 uppercase letter A-Z\n"
+                "It must contain at least 1 number 0-9\n"
+                "It must contain at least 1 special character $#@\n"
+                "Total length must be between 6 and 16 characters"
+                )
 
 if __name__ == "__main__" :
     main()
