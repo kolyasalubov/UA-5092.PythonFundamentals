@@ -25,6 +25,9 @@ def area_triangle(height: float, base: float) -> float:
     Returns:
         float: The area of the triangle.
     """
+    if height <= 0 and base <= 0:
+            print("Height and base must be positive")
+            return None
     return 0.5 * height * base
 
 
@@ -36,4 +39,7 @@ def area_circle(radius: float) -> float:
     Returns:
         float: The area of the circle.
     """
+    if radius <= 0:
+        print("Height and base must be positive")
+        return None
     return math.pi * pow(radius, 2)
