@@ -1,20 +1,41 @@
 import areas
 
-choice = input("Choose rectangle, triangle or circle: ")
 
-if choice == "rectangle":
-    a = float(input("Enter a: "))
-    b = float(input("Enter b: "))
-    print(areas.rectangle(a, b))
+def get_positive_number(message: str) -> float:
+    while True:
+        number = input(message)
 
-elif choice == "triangle":
-    a = float(input("Enter a: "))
-    h = float(input("Enter h: "))
-    print(areas.triangle(a, h))
+        if number.isdigit():
+            number = float(number)
 
-elif choice == "circle":
-    r = float(input("Enter r: "))
-    print(areas.circle(r))
+            if number > 0:
+                return number
+            else:
+                print("The value must be greater than 0")
+        else:
+            print("Please enter a number")
 
-else:
-    print("Please choose rectangle, triangle or circle")
+
+if __name__ == "__main__":
+    while True:
+        choice = input("Choose rectangle, triangle or circle: ")
+
+        if choice == "rectangle":
+            a = get_positive_number("Enter a: ")
+            b = get_positive_number("Enter b: ")    
+            print(areas.rectangle(a, b))
+            break
+
+        elif choice == "triangle":
+            a = get_positive_number("Enter a: ")
+            h = get_positive_number("Enter h: ")
+            print(areas.triangle(a, h))
+            break
+
+        elif choice == "circle":
+            r = get_positive_number("Enter r: ")
+            print(areas.circle(r))
+            break
+
+        else:
+            print("Please choose rectangle, triangle or circle.")
