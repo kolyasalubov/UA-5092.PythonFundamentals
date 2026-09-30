@@ -1,37 +1,63 @@
 import re
 
 
-def is_password_valid(password: str) -> bool:
+def validate_password(password: str) -> list[str]:
     """Check if the given password meets the specified criteria.
 
     Args:
         password (str): The password to be validated.
 
     Returns:
-        bool: True if the password is valid, False otherwise.
+        list[str]: A list of password validation errors.
     """
-    pattern = r"^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[$#@])[A-Za-z0-9$#@]{6,16}$"
-    return bool(re.match(pattern, password))
+    errors = []
+
+    if len(password) < 6:
+        errors.append("Password must contain at least 6 characters.")
+
+    if len(password) > 16:
+        errors.append("Password must contain no more than 16 characters.")
+
+    if not re.search(r"[a-z]", password):
+        errors.append(
+            "Password must contain at least 1 lowercase letter a-z."
+        )
+
+    if not re.search(r"[A-Z]", password):
+        errors.append(
+            "Password must contain at least 1 uppercase letter A-Z."
+        )
+
+    if not re.search(r"[0-9]", password):
+        errors.append("Password must contain at least 1 number 0-9.")
+
+    if not re.search(r"[$#@]", password):
+        errors.append(
+            "Password must contain at least 1 special character $#@."
+        )
+
+    if re.search(r"[^A-Za-z0-9$#@]", password):
+        errors.append("Password contains unsupported characters.")
+
+    return errors
 
 
 def menu() -> None:
     """Menu for password validation."""
     while True:
-        password = input("Enter your password or nothing if you want to exit: ")
+        password = input(
+            "Enter your password or nothing if you want to exit: "
+        )
         if not password:
             break
-        if is_password_valid(password):
-            print("Password is valid.\n")
+
+        errors = validate_password(password)
+
+        if not errors:
+            print("Password is valid.")
         else:
-            print(
-                """Password is invalid.
-It must contain at least 1 lowercase letter a-z
-It must contain at least 1 uppercase letter A-Z
-It must contain at least 1 number 0-9
-It must contain at least 1 special character $#@
-Total length must be between 6 and 16 characters
-"""
-            )
+            for error in errors:
+                print(error)
 
 
 if __name__ == "__main__":
