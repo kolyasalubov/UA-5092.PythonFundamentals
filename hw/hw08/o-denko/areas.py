@@ -21,6 +21,8 @@ def calculate_area_rectangle(length: int | float, width: int | float) -> int | f
     length: length of the rectangle
     width: width of the rectangle
     """
+    if length < 0 or width < 0:
+        raise ValueError("Length and width must be non-negative")
     return length * width
 
 
@@ -31,6 +33,8 @@ def calculate_area_triangle(base: int | float, height: int | float) -> float:
     base: base of the triangle
     height: height of the triangle
     """
+    if base < 0 or height < 0:
+        raise ValueError("Base and height must be non-negative")
     return 0.5 * base * height
 
 
@@ -40,4 +44,6 @@ def calculate_area_circle(radius: int | float) -> float:
 
     radius: radius of the circle
     """
+    if radius < 0:
+        raise ValueError("Radius must be non-negative")
     return pi * radius**2
