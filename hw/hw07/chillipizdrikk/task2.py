@@ -75,7 +75,6 @@ def main():
             case "3":
                 radius = check_number("Enter radius: ")
                 print(f"Area of your circle is: {circle_area(radius)}\n")
-                print("Please enter a valid number.\n")
             case "4":
                 break
             case _:
