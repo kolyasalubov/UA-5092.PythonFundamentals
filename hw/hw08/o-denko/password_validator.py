@@ -10,7 +10,9 @@ RE_SPECIAL = re.compile(r"[$#@]")
 
 
 def is_valid_password(password: str) -> bool:
-    """Check if all password conditions are met."""
+    """
+    Check if all password conditions are met.
+    """
     rules = (
         MIN_LENGTH <= len(password) <= MAX_LENGTH,
         RE_LOWERCASE.search(password) is not None,
