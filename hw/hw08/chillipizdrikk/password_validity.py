@@ -20,7 +20,7 @@ def validate_password(password: str) -> bool:
             True: when password matches requirements
             False: when password doesn`t match requirements
     '''
-    return bool(re.fullmatch(PATTERN, password))
+    return re.fullmatch(PATTERN, password)
 
 if __name__ == "__main__":
     while True:
