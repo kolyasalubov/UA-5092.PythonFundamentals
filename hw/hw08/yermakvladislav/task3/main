@@ -1,0 +1,18 @@
+import areas
+
+def find_area():
+
+  figure = input("Enter the selected shape. (rectangle, triangle, circle): " )
+  figure = figure.lower()
+  
+  if figure == "rectangle":
+    result = areas.area_rectangle()
+  elif figure == "triangle":
+    result = areas.area_triangle()
+  else:
+    result = areas.area_circle()
+    
+  return f"The area of the {figure} is equal to {result}"
+
+if __name__ == "__main__":
+    print(find_area())
