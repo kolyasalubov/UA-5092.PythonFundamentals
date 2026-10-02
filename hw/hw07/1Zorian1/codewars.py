@@ -3,7 +3,7 @@
 # def greet(name):
 #     if name == "Johnny":
 #         return "Hello, my love!"
-#     return "Hello, {name}!".format(name=name)
+#     return f"Hello, {name}!"
 
 # 2
 
@@ -97,3 +97,11 @@
 #         return True
 #     else:
 #         return False
+
+if __name__ == "__main__":
+    print(greet("Johnny"))
+    print(distance(1, 1, 4, 5))
+    print(zero_fuel(50, 25, 2))
+    print(are_you_playing_banjo("Ringo"))
+    print(count_sheeps([True, True, False, True]))
+
