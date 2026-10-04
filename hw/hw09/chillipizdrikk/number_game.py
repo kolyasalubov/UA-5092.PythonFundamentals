@@ -1,9 +1,22 @@
+'''
+This module implements a game in which the user must guess 
+a number between 0 and 100 in 10 attempts.
+'''
 from random import randint
 
 GOAL = randint(0, 100)
 ATTEMPTS = 10
 
-def guess_number():
+def guess_number() -> None:
+    '''
+    Function that asks the user for a number and prompts whether
+    the number is greater or less than user`s number until
+    user wins or runs out of attempts.
+    Args: 
+        None
+    Returns: 
+        None
+    '''
     print("-" * 20 + "Guess the number" + "-" * 20)
     print("\nYou need to guess the number between 1 and 100.\n"
     f"You have {ATTEMPTS} attempts. Try it!\n"
