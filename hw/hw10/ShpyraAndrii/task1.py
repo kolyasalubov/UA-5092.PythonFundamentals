@@ -1,7 +1,3 @@
-from math import sqrt
-from functools import reduce
-
-
 class Polygon:
     def __init__(self, sides_amount, sides=None):
         self.sides_amount = sides_amount
@@ -26,15 +22,16 @@ class Polygon:
 class Rectangle(Polygon):
     def __init__(self):
         super().__init__(4, [0, 0, 0, 0])
+        self.height = 0
+        self.width = 0
 
     def input_sides(self):
-        height = self.input_positive_number('height')
-        width = self.input_positive_number('width')
-        self.sides = [height, height, width, width]
+        self.height = self.input_positive_number('height')
+        self.width = self.input_positive_number('width')
+        self.sides = [self.height, self.height, self.width, self.width]
 
     def calculate_area(self):
-        sides_product = reduce(lambda acc, value: acc * value, self.sides)
-        return sqrt(sides_product)
+        return self.width * self.height
 
 
 if __name__ == '__main__':
