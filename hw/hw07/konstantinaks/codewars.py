@@ -1,12 +1,34 @@
+# # task1
 
+# def greet(name):
+#     if name == "Johnny":
+#         return "Hello, my love!"
+#     return "Hello, {0}!".format(name)
 
-#task Jenny has written a function that returns a greeting for a user. 
-# However, she's in love with Johnny, and would like to greet him slightly different. 
-# She added a special case to her function, but she made a mistake.
+# # task2
 
-def greet(name):
-    if name == "Johnny":
-        return "Hello, my love!"
-    return "Hello, {0}!".format(name)
+# import math
+# def distance(x1, y1, x2, y2):
+#     return round(math.sqrt((x2 - x1)**2 + (y2 - y1)**2), 2)
 
-#task2
+# # task 3
+
+# def filter_words(st):
+#     result = st.split()
+#     clean_text = " ".join(result)
+#     res = clean_text.capitalize()
+#     return res
+
+# # task 4
+
+# def number_to_string(num):
+#    return str(num)
+
+# # task 5
+
+# def reverse(st):
+#     words = st.split()
+#     reversed_words = words[::-1]
+#     return " ".join(reversed_words)
+
+# task 6
