@@ -32,3 +32,6 @@
 #     return " ".join(reversed_words)
 
 # task 6
+a = [1, 2, 3, 4]
+a.reverse()
+print(a)
