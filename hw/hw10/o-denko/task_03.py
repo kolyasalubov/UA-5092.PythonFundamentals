@@ -36,6 +36,13 @@ class Employee:
         """
         print(f"Name: {self.name}, Salary: {self.salary}")
 
+    def __del__(self) -> None:
+        """
+        Decrement the employee count when an employee instance is destroyed.
+        """
+        if hasattr(self, 'name'):
+            Employee.count -= 1
+
 
 if __name__ == '__main__':
     emp1 = Employee("Alice", 50000)
@@ -44,6 +51,10 @@ if __name__ == '__main__':
     emp1.display_employee_info()
     emp2.display_employee_info()
 
+    Employee.total_employees()
+
+    print("\nDeleting emp1 ('Alice')...")
+    del emp1
     Employee.total_employees()
 
     print("\n" + "=" * 50 + "\n")
