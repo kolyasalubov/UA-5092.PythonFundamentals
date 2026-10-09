@@ -44,15 +44,9 @@ def main() -> None:
     user_input = input("Enter day number (1-7): ")
     try:
         day_number = int(user_input)
-    except ValueError:
-        logger.error("Non-integer input: %r", user_input)
-        print("Invalid input: please enter a whole number.")
-        return
-
-    try:
         day_name = get_day_of_week(day_number)
     except ValueError as error:
-        logger.error("Invalid day number %d: %s", day_number, error)
+        logger.error("Invalid day input %r: %s", user_input, error)
         print(f"Invalid input: {error}")
     else:
         print(f"Day of the week: {day_name}")

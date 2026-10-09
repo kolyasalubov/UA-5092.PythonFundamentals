@@ -33,16 +33,10 @@ def main() -> None:
     user_input = input("Enter your age: ")
     try:
         age = int(user_input)
-    except ValueError:
-        logger.error("Non-integer input: %r", user_input)
-        print("Invalid input: please enter a whole number.")
-        return
-
-    try:
         parity = check_age(age)
     except ValueError as error:
-        logger.error("Invalid age %d: %s", age, error)
-        print(f"Invalid age: {error}")
+        logger.error("Invalid age input %r: %s", user_input, error)
+        print(f"Invalid input: {error}")
     else:
         print(f"Age is an {parity} number.")
 
