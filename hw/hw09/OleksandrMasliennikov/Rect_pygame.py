@@ -1,56 +1,64 @@
+"""Move a red rectangle around the window with the arrow keys."""
+
 import pygame
 
-FPS = 60
 
-WIDTH_DISPLAY = 500
-HEIGHT_DISPLAY = 500
+class Config:
+    """Game settings collected in one place."""
 
-COORD_X = 50
-COORD_Y = 50
-WIDTH_RECTANGLE = 40
-HEIGHT_RECTANGLE = 60
-DELTA_STEP = 5
+    FPS = 60
+    WINDOW_SIZE = (500, 500)
+    CAPTION = 'My first game'
 
-BLACK_COLOR = (0, 0, 0)
-RED_COLOR = (250, 0, 0)
+    RECT_START = (50, 50)
+    RECT_SIZE = (40, 60)
+    STEP = 5
 
-pygame.init()
-
-
-gameDisplay = pygame.display.set_mode((WIDTH_DISPLAY, HEIGHT_DISPLAY), pygame.RESIZABLE)
-
-pygame.display.set_caption("My first game")
+    BACKGROUND_COLOR = (0, 0, 0)
+    RECT_COLOR = (250, 0, 0)
 
 
-run = True
-clock = pygame.time.Clock()
-
-while run:
-#    pygame.time.delay(100)
-    
-    for event in pygame.event.get(): 
-        if event.type == pygame.QUIT:
-            run = False
-
-    keys = pygame.key.get_pressed()
-    
-    if keys[pygame.K_LEFT] and COORD_X > 0:
-        COORD_X = COORD_X - DELTA_STEP
-    if keys[pygame.K_RIGHT] and COORD_X < WIDTH_DISPLAY - WIDTH_RECTANGLE:
-        COORD_X = COORD_X + DELTA_STEP
-    if keys[pygame.K_UP] and COORD_Y > 0:
-        COORD_Y = COORD_Y - DELTA_STEP
-    if keys[pygame.K_DOWN] and COORD_Y < HEIGHT_DISPLAY - HEIGHT_RECTANGLE:
-        COORD_Y = COORD_Y + DELTA_STEP
+def move_rect(rect: pygame.Rect,
+              keys: pygame.key.ScancodeWrapper,
+              bounds: pygame.Rect) -> None:
+    """Move the rectangle by pressed arrow keys and keep it inside bounds."""
+    if keys[pygame.K_LEFT]:
+        rect.x -= Config.STEP
+    if keys[pygame.K_RIGHT]:
+        rect.x += Config.STEP
+    if keys[pygame.K_UP]:
+        rect.y -= Config.STEP
+    if keys[pygame.K_DOWN]:
+        rect.y += Config.STEP
+    rect.clamp_ip(bounds)
 
 
-    gameDisplay.fill(BLACK_COLOR) 
+def main() -> None:
+    """Initialize pygame and run the game loop until the window is closed."""
+    _, failed = pygame.init()
+    if failed:
+        print(f'Warning: {failed} pygame module(s) failed to initialize.')
 
-    pygame.draw.rect(gameDisplay, RED_COLOR, [COORD_X, 
-                                              COORD_Y, 
-                                              WIDTH_RECTANGLE, 
-                                              HEIGHT_RECTANGLE])
-    pygame.display.update()
-    clock.tick(FPS)
-    
+    screen = pygame.display.set_mode(Config.WINDOW_SIZE, pygame.RESIZABLE)
+    pygame.display.set_caption(Config.CAPTION)
+    clock = pygame.time.Clock()
+    rect = pygame.Rect(Config.RECT_START, Config.RECT_SIZE)
 
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        move_rect(rect, pygame.key.get_pressed(), screen.get_rect())
+
+        screen.fill(Config.BACKGROUND_COLOR)
+        pygame.draw.rect(screen, Config.RECT_COLOR, rect)
+        pygame.display.update()
+        clock.tick(Config.FPS)
+
+    pygame.quit()
+
+
+if __name__ == '__main__':
+    main()
