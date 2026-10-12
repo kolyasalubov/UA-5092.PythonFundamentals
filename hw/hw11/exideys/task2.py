@@ -20,15 +20,16 @@ def get_day(day_number: int) -> str:
         The corresponding day of the week.
 
     Raises:
-        IndexError: If the number is less than 1 or greater than 7.
+        ValueError: If the number is less than 1 or greater than 7.
     """
-    if day_number <= 0:
-        raise IndexError("Number can't be negative or zero")
-
-    if day_number > 7:
-        raise IndexError("Number can't be greater than 7")
-
-    return DAYS_OF_WEEK[day_number - 1]
+    if day_number == 0:
+        raise ValueError("Number can't be zero it must be from 1 to 7")
+    elif day_number > 7:
+        raise ValueError("Number can't be greater than 7")
+    elif day_number < 0:
+        raise ValueError("Number can't be negative, it must be from 1 to 7")
+    else:
+        return DAYS_OF_WEEK[day_number - 1]
 
 
 def main() -> None:
@@ -40,9 +41,7 @@ def main() -> None:
     try:
         user_input = int(input("Enter a number from 1 to 7: "))
         print(f"Day of the week: {get_day(user_input)}")
-    except ValueError:
-        print("Error: input must be a number")
-    except IndexError as exc:
+    except ValueError as exc:
         print(f"Error: {exc}")
 
 

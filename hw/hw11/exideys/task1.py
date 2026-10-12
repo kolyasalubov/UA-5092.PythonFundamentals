@@ -14,16 +14,19 @@ def check_age(user_input: str) -> str:
         A message indicating whether the age is even or odd.
 
     Raises:
-        InvalidAgeError: If the input is not a number or the age is negative.
+        InvalidAgeError: If the input is empty, not a number,
+        negative, or greater than 120.
     """
+    if not user_input.strip():
+        raise InvalidAgeError("Age can't be empty")
     try:
         age = int(user_input)
     except ValueError:
         raise InvalidAgeError("Age must be a number")
-
     if age < 0:
         raise InvalidAgeError("Age can't be negative")
-
+    if age > 120:
+        raise InvalidAgeError("Age can't be more than 120")
     if age % 2 == 0:
         return "Age is Even"
 
