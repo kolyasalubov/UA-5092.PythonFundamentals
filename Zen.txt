@@ -201,5 +201,8 @@ The Zen of Python, by Tim Peters
 199.Although practicality beats purity.
 vkachurivskyi-hash
 200.Errors should never pass silently.
-
-
+201.Unless explicitly silenced.
+202.In the face of ambiguity, refuse the temptation to guess.
+203.There should be one-- and preferably only one --obvious way to do it.
+204.Although that way may not be obvious at first unless you're Dutch.
+205.Now is better than never.
