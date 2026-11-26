@@ -1,4 +1,6 @@
 # task1
+import pygame
+
 from random import randint
 
 secret_number = randint(1, 100)
@@ -18,7 +20,6 @@ else:
     print(f"Спроби закінчилися. Загадане число: {secret_number}.")
 
 # task2
-import pygame
 
 FPS = 60
 
